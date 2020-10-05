@@ -1,0 +1,30 @@
+{% extends 'Student/studyHome.html' %}
+
+{% block courses %}white{% endblock courses %}
+
+{% block course %}
+
+	<div class="container">
+		<form method="post" action="enroll">
+		  <div class="form-group">
+		    <label for="username">Username</label>
+		    <input type="text" class="form-control" name="username" id="username">
+		  </div>
+		  <div class="form-group">
+		    <label for="courseCode">Course Code</label>
+		    <input type="text" class="form-control" name="courseCode" id="courseCode">
+		  </div>
+		  {% csrf_token %}
+		  <button type="submit" class="btn btn-primary">Enroll</button>
+		</form>
+	</div>
+
+	{% for item in obj %}
+		    <div class="card">
+			  <div class="card-body">
+			    <h5 class="card-title">{{item.course}}</h5>
+			  </div>
+			</div>
+    {% endfor %}
+
+{% endblock course %}

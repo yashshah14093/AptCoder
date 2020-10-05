@@ -1,0 +1,17 @@
+{% extends 'Teacher/teachHome.html' %}
+
+{% block dashboard %}white{% endblock dashboard %}
+
+{% block course %}
+
+	{% for item in obj %}
+		{% if user.username == item.teacher %}
+		    <div class="card">
+			  <div class="card-body">
+			    <h5 class="card-title">{{item.course}}</h5>
+			  </div>
+			</div>
+		{% endif %}
+    {% endfor %}
+
+{% endblock course %}

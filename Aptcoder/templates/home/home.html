@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %} AptCoder {% endblock title %}
+{% block home %}white{% endblock home %}
+
+{% block body %}
+
+<div class="shadow-none p-3 mb-5 bg-light rounded text-body display-4">Platform to Learn to Code</div>
+
+<div class="container">
+  
+  <div class="row">
+
+	<div class="card shadow-sm" style="width: 18rem;">
+	<!--   <img src="..." class="card-img-top" alt="..."> -->
+	  <div class="card-body bg-light">
+	    <h5 class="card-title ">For Teachers</h5>
+	    <p class="card-text">We provide you platform to teach students all over the world.</p>
+	    <a href="/teach" class="btn btn-primary stretched-link">Start Teaching</a>
+	  </div>
+	</div>
+
+	<div class="card shadow-sm offset-md-1" style="width: 18rem;">
+	<!--   <img src="..." class="card-img-top" alt="..."> -->
+	  <div class="card-body bg-light">
+	    <h5 class="card-title ">For Students</h5>
+	    <p class="card-text">Join students all over the world to learn and practice coding skills.</p>
+	    <a href="/study" class="btn btn-primary stretched-link">Start Learning</a>
+	  </div>
+	</div>
+
+</div>
+</div>
+
+
+{% endblock body %}
